@@ -1,0 +1,109 @@
+:root {
+    --clr-primary-400: hsl(0, 0%, 100%);
+    --clr-primary-500: hsl(212, 45%, 89%);
+    --clr-secondary-400: hsl(220, 15%, 55%);
+    --clr-secondary-500: hsl(218, 44%, 22%);
+    
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --font-family: 'Outfit', sans-serif;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    * {
+        margin: 0;
+    }
+    
+    body {
+        line-height: 1.2;
+    }
+    
+    img, svg {
+        display: block;
+        max-width: 100%;
+    }
+    
+    input, button, textarea, select {
+        font: inherit;
+      }
+    
+      p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+      }
+
+      h1, h2, h3 {
+        line-height: 1.2;
+      }
+    
+    body {
+        font-family: var(--font-family);
+        font-weight: var(--fw-regular);
+        font-size: 1rem;
+        color: var(--clr-secondary-500);
+        background-color: var(--clr-primary-500);
+        
+        display: grid;
+        margin: 1rem;
+        place-content: center;
+        justify-content: center;
+        height: 100vh;
+    
+    }
+    
+    .qr-code {
+        --content-padding: 0.9rem;
+        --content-spacing: 0.75rem;
+        --border-radius: 1.1rem;
+    
+        display: grid;
+        background-color: var(--clr-primary-400);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        max-width: 330px;
+        box-shadow: 0.5rem 1rem 3rem
+         var(--clr-primary-500);
+    }
+    
+    @media (min-width: 330px) {
+        .qr-code {
+            --content-padding: 1rem;
+        }
+     }
+
+    .code-content {
+        display: grid;
+        gap: var(--content-spacing);
+        padding: var(--content-padding);
+        margin-bottom: 1.5rem;
+        justify-content: center; 
+        text-align: center;
+    }
+    
+    .code-heading {
+        font-size: 1.5rem;
+        font-family: var(--font-family);
+        font-weight: var(--fw-bold);
+        color: var(--clr-secondary-500);
+    }
+    
+    .code-paragraph {
+        color: var(--clr-secondary-400);
+        font-size: 1rem;
+        font-family: var(--font-family);
+        font-weight: var(--fw-regular);  
+    }
+    
+    .code-img {
+        margin: 0.9rem;
+        
+    }
+
+    .code-img img{
+        border-radius: 1rem;
+    }
